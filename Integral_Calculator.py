@@ -11,7 +11,7 @@ Nonetheless, the program provides a reasonably accurate approximation. Furthermo
 # Variables
 a = 0 # Lower bound of the integral
 b = 1 # Upper bound of the integral
-n = 10000 # Number of rectangles to use
+n = 100_000 # Number of rectangles to use
 
 # The function to calculate the area under the curve for.
 def f(x):
@@ -30,9 +30,9 @@ def integral(a, b, n, sum_direction): # sum_direction is True for right hand sun
 
     def x_i(i): # Calculates the x value of the ith rectangle
         if sum_direction:
-            return a + i * width
-        else:
             return a + (i+1) * width
+        else:
+            return a + i * width
     
     for i in range(n): # Calculates the area of each rectangle and adds it to the total area
         area += width * f(x_i(i))
@@ -40,4 +40,4 @@ def integral(a, b, n, sum_direction): # sum_direction is True for right hand sun
     return area
 
 # Output
-print("\nThe area of f(x) in the interval [", a, ",", b, "] is between", integral(0, 1, n, True), "and", integral(0, 1, n, False), "\n")
+print("\nThe area of f(x) in the interval [", a, ",", b, "] is between", integral(0, 1, n, False), "(left hand sum) and", integral(0, 1, n, True), "(right hand sum).\n")
