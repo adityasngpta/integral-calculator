@@ -1,4 +1,5 @@
 # Integral Calculator Using N Rectangles
+# By Aditya Sengupta
 
 '''
 As I continue to delve into the fascinating world of Calculus, I have come across an intriguing concept known as integration.
