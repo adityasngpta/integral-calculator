@@ -1,4 +1,5 @@
 # Integral Calculator
+By Aditya Sengupta
 
 As I continue to delve into the fascinating world of Calculus, I have come across an intriguing concept known as integration.
 A useful way to approximate integration involves the use of rectangles. 
